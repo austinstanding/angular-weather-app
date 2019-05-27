@@ -9,6 +9,7 @@ import { WeatherItemComponent } from './weather/weather-item/weather-item.compon
 import { WeatherSearchComponent } from './weather/weather-search/weather-search.component';
 import { WeatherService } from './weather/weather.service';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
@@ -22,30 +23,31 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
 
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    RouterModule
-  ],
+	imports: [
+		BrowserModule,
+		FormsModule,
+		ReactiveFormsModule,
+		HttpClientModule,
+		AppRoutingModule,
+		RouterModule
+	],
 
-  declarations: [
-    AppComponent,
-    WeatherSearchComponent,
-    WeatherListComponent,
-    WeatherItemComponent,
-    HeaderComponent,
-    PageNotFoundComponent,
-    WeatherTodayComponent,
-    SigninComponent,
-    SignupComponent,
-    SignoutComponent,
-    TemperatureConverterPipe
-  ],
+	declarations: [
+		AppComponent,
+		WeatherSearchComponent,
+		WeatherListComponent,
+		WeatherItemComponent,
+		HeaderComponent,
+		FooterComponent,
+		PageNotFoundComponent,
+		WeatherTodayComponent,
+		SigninComponent,
+		SignupComponent,
+		SignoutComponent,
+		TemperatureConverterPipe
+	],
 
-  providers: [WeatherService, AuthService, AuthGuard, { provide: APP_CONFIG, useValue: AppConfig }],
-  bootstrap: [AppComponent]
+	providers: [WeatherService, AuthService, AuthGuard, { provide: APP_CONFIG, useValue: AppConfig }],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

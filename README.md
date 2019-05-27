@@ -7,49 +7,51 @@ Weather app is the little web app for displaying the weather report from openwea
 
 1. Display today weather
 2. Display forecast weather  
-3. Search by city/zip code 
-4. Open weather api integration 
+3. Search by city/zip code
+4. Open weather api integration
 5. Convert celsius to fahrenheit
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
-## Prerequisites  
+## Prerequisites
+
 1. Install [Node.js®](https://nodejs.org/en/download) and npm
-    
-    node -v 
-    
+
+    node -v
+
     npm -v
-    
+
 2. Install Angular cli
-    
+
     npm install -g @angular/cli
-    
-3. Install node packages 
-    
+
+3. Install node packages
+
     cd /go/to/app/directory having package.json
-    
+
     npm install
-   
+
 ## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Run Production/QA configuration 
+## Run Production/QA configuration
 
-#build
+### build
 
  ng build --environment=prod --output-path=build/prod/
 
-#shorthand
+### shorthand
 
  ng b -prod --output-path=build/prod/
 
-#serve
+### serve
 
 ng serve --environment=prod
 
 ng serve --environment=qa
 
-#shorthand
+### shorthand
 
 $ ng s -prod
 
