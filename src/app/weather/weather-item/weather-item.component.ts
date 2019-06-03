@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Weather } from '../weather';
 
 @Component({
 	selector: 'weather-item',
 	templateUrl: './weather-item.component.html'
 })
-export class WeatherItemComponent {
+export class WeatherItemComponent implements OnInit {
 	// tslint:disable-next-line:no-input-rename
 	@Input('WeatherItem') weather: Weather;
 	// declare event for subscription

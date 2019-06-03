@@ -10,7 +10,7 @@ export class SignupComponent implements OnInit {
 
 	genders = ['male', 'female'];
 	signupForm: FormGroup;
-	submitted: boolean = false;
+	submitted = false;
 
 	constructor() { }
 
