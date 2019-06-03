@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import 'rxjs/Rx';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
+import { throwError } from 'rxjs';
 
 @Injectable()
 export class WeatherService {
@@ -44,6 +45,6 @@ export class WeatherService {
 		let errMsg: string;
 		errMsg = error.message ? error.message : error.toString();
 		console.error(errMsg);
-		return Observable.throw(errMsg);
+		return throwError(errMsg);
 	}
 }
