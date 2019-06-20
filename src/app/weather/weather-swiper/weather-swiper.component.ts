@@ -2,25 +2,24 @@ import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from '../weather.service';
 
 @Component({
-	selector: 'weather-list',
-	templateUrl: './weather-list.component.html',
-	styleUrls: ['./weather-list.component.scss'],
+	selector: 'weather-swiper',
+	templateUrl: './weather-swiper.component.html',
+	styleUrls: ['./weather-swiper.component.scss'],
 	providers: [WeatherService]
 })
 
-export class WeatherListComponent implements OnInit {
+export class WeatherSwiperComponent implements OnInit {
 	@Input('WeatherForecastList') weathers: any;
 	errorMessage: string;
 	selectedItem: string = 'nothing';
 
-	constructor() {
-	}
+	constructor() { }
 
-	ngOnInit(): any {
+	ngOnInit() {
 	}
 
 	updateSelectedWeatherItem(event: any) {
-		console.log('Recieved selected weather item in list component', event);
+		console.log('Recieved selected weather item in carousel component', event);
 		this.selectedItem = event;
 	}
 }

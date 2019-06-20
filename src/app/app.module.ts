@@ -20,6 +20,21 @@ import { AuthGuard } from './auth/auth-guard.service';
 import { SignoutComponent } from './auth/signout/signout.component';
 import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.pipe';
 import { RouterModule } from '@angular/router';
+import { WeatherSwiperComponent } from './weather/weather-swiper/weather-swiper.component';
+import { SwiperModule, SwiperConfigInterface, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+	observer: true,
+	direction: 'horizontal',
+	threshold: 50,
+	spaceBetween: 5,
+	slidesPerView: 3,
+	centeredSlides: true,
+	keyboard: true,
+	mousewheel: true,
+	a11y: true,
+	scrollbar: true
+};
 
 @NgModule({
 
@@ -29,7 +44,8 @@ import { RouterModule } from '@angular/router';
 		ReactiveFormsModule,
 		HttpClientModule,
 		AppRoutingModule,
-		RouterModule
+		RouterModule,
+		SwiperModule,
 	],
 
 	declarations: [
@@ -44,10 +60,18 @@ import { RouterModule } from '@angular/router';
 		SigninComponent,
 		SignupComponent,
 		SignoutComponent,
-		TemperatureConverterPipe
+		TemperatureConverterPipe,
+		WeatherSwiperComponent,
 	],
 
-	providers: [WeatherService, AuthService, AuthGuard, { provide: APP_CONFIG, useValue: AppConfig }],
+	providers: [
+		WeatherService,
+		AuthService,
+		AuthGuard,
+		{ provide: APP_CONFIG, useValue: AppConfig },
+		{ provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG }
+	],
+
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
