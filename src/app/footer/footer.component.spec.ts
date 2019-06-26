@@ -22,4 +22,12 @@ describe('FooterComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy();
 	});
+
+	it('should have a repo URL', () => {
+		expect(component.repoUrl).toBeTruthy();
+	});
+
+	it('should have an image file', () => {
+		expect(component.fullImagePath).toBeTruthy();
+	});
 });
